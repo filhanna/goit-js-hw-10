@@ -22,7 +22,7 @@ inputSearch.addEventListener(
 
 function onSearch() {
   const inputValue = inputSearch.value;
-  console.log(inputSearch.value);
+
   fetchCountries(inputValue)
     .then(data => {
       countryList.innerHTML = '';
@@ -64,6 +64,5 @@ function createMarcupListCountry(data) {
       `<li style="display: flex; align-items: center;"><img src= ${country.flags.png} alt="" width="30" height="100%" style="margin-right: 10px;">
     <h2>${country.name.official}</h2></li>`
     );
-    console.log(country);
   });
 }
