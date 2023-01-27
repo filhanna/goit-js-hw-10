@@ -31,7 +31,7 @@ function onSearch() {
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
-      } else if (data.length < 10 && data.length > 2) {
+      } else if (data.length <= 10 && data.length >= 2) {
         createMarcupListCountry(data);
       } else {
         createMarcupOneCountry(data);
